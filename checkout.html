@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout Preview | Three Roots Animal Nutrition</title>
+  <meta name="description" content="Private bilingual preview of the Three Roots checkout layout with Stripe credit-card and ACH bank-payment options.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#143d2b">
+  <link rel="stylesheet" href="store.css">
+  <script src="store.js" defer></script>
+</head>
+<body data-page="checkout">
+  <div class="demo-bar" data-en="PRIVATE CHECKOUT PREVIEW · DO NOT ENTER REAL CARD OR BANK INFORMATION" data-es="VISTA PRIVADA DE PAGO · NO INGRESE DATOS REALES DE TARJETA O BANCO">PRIVATE CHECKOUT PREVIEW · DO NOT ENTER REAL CARD OR BANK INFORMATION</div>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" aria-label="Three Roots Animal Nutrition home"><img class="logo" src="./three-roots-logo.png" alt="Three Roots Animal Nutrition"></a>
+      <nav class="nav-links" aria-label="Checkout navigation">
+        <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+        <a href="shop.html" data-en="Back to products" data-es="Volver a productos">Back to products</a>
+        <a class="cart-link" href="shop.html" data-en="Cart" data-es="Carrito">Cart <span class="cart-count" aria-label="Items in cart">0</span></a>
+        <div class="lang-toggle" aria-label="Language">
+          <button type="button" class="active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="checkout-main">
+    <div class="container">
+      <div class="checkout-top">
+        <div><div class="eyebrow" data-en="Secure checkout concept" data-es="Concepto de pago seguro">Secure checkout concept</div><h1 data-en="Review and place your order" data-es="Revise y envíe su pedido">Review and place your order</h1><p data-en="This shows the proposed customer experience. Stripe, banking, taxes, inventory, and fulfillment are not connected." data-es="Esta página muestra la experiencia propuesta. Stripe, banco, impuestos, inventario y entrega no están conectados.">This shows the proposed customer experience. Stripe, banking, taxes, inventory, and fulfillment are not connected.</p></div>
+        <a class="btn btn-outline" href="shop.html" data-en="← Edit cart" data-es="← Modificar carrito">← Edit cart</a>
+      </div>
+
+      <form id="checkoutForm">
+        <div class="checkout-grid">
+          <div class="checkout-stack">
+            <section class="panel" aria-labelledby="contactTitle">
+              <h2 id="contactTitle"><span class="panel-number">1</span><span data-en="Contact information" data-es="Información de contacto">Contact information</span></h2>
+              <p class="panel-intro" data-en="Used for order updates, pickup confirmation, and delivery coordination." data-es="Se usará para actualizaciones, confirmación de recogida y coordinación de entrega.">Used for order updates, pickup confirmation, and delivery coordination.</p>
+              <div class="field-grid">
+                <div class="field"><label for="customerName" data-en="Full name" data-es="Nombre completo">Full name</label><input id="customerName" name="name" autocomplete="name" placeholder="Sample customer / Cliente de ejemplo" required></div>
+                <div class="field"><label for="customerPhone" data-en="Mobile number" data-es="Número de celular">Mobile number</label><input id="customerPhone" name="phone" inputmode="tel" autocomplete="tel" placeholder="(956) 555-0123" required></div>
+                <div class="field full"><label for="customerEmail" data-en="Email address" data-es="Correo electrónico">Email address</label><input id="customerEmail" name="email" type="email" autocomplete="email" placeholder="customer@example.com" required></div>
+              </div>
+            </section>
+
+            <section class="panel" aria-labelledby="deliveryTitle">
+              <h2 id="deliveryTitle"><span class="panel-number">2</span><span data-en="Pickup or delivery" data-es="Recogida o entrega">Pickup or delivery</span></h2>
+              <p class="panel-intro" data-en="The live store can confirm availability and calculate delivery before payment." data-es="La tienda activa podrá confirmar disponibilidad y calcular la entrega antes del pago.">The live store can confirm availability and calculate delivery before payment.</p>
+              <div class="delivery-options">
+                <label class="delivery-option"><input type="radio" name="delivery" value="pickup" checked><b data-en="Weslaco pickup" data-es="Recogida en Weslaco">Weslaco pickup</b><span data-en="1702 S. International Blvd. · Free" data-es="1702 S. International Blvd. · Gratis">1702 S. International Blvd. · Free</span></label>
+                <label class="delivery-option"><input type="radio" name="delivery" value="delivery"><b data-en="Texas delivery" data-es="Entrega en Texas">Texas delivery</b><span data-en="Demo freight estimate: $45" data-es="Flete de ejemplo: $45">Demo freight estimate: $45</span></label>
+              </div>
+              <div class="field-grid" id="deliveryFields" hidden style="margin-top:16px">
+                <div class="field full"><label for="address" data-en="Delivery address" data-es="Dirección de entrega">Delivery address</label><input id="address" name="address" autocomplete="street-address" placeholder="Street address"></div>
+                <div class="field"><label for="city" data-en="City" data-es="Ciudad">City</label><input id="city" name="city" autocomplete="address-level2"></div>
+                <div class="field"><label for="zip" data-en="ZIP code" data-es="Código postal">ZIP code</label><input id="zip" name="zip" inputmode="numeric" autocomplete="postal-code"></div>
+              </div>
+            </section>
+
+            <section class="panel" aria-labelledby="paymentTitle">
+              <h2 id="paymentTitle"><span class="panel-number">3</span><span data-en="Payment method" data-es="Método de pago">Payment method</span></h2>
+              <p class="panel-intro" data-en="Proposed embedded Stripe payment area. The boxes below are visual placeholders and cannot accept payment details." data-es="Área propuesta para pago integrado con Stripe. Los campos siguientes son visuales y no aceptan datos de pago.">Proposed embedded Stripe payment area. The boxes below are visual placeholders and cannot accept payment details.</p>
+              <div class="payment-tabs" role="tablist" aria-label="Payment method preview">
+                <button class="payment-tab active" type="button" role="tab" aria-selected="true" data-payment="card" data-en="Credit / debit card" data-es="Tarjeta de crédito / débito">Credit / debit card</button>
+                <button class="payment-tab" type="button" role="tab" aria-selected="false" data-payment="ach" data-en="ACH bank payment" data-es="Pago bancario ACH">ACH bank payment</button>
+              </div>
+              <div class="payment-demo" id="cardPayment" role="tabpanel">
+                <div class="stripe-slot"><span class="stripe-mark">S</span><span data-en="Stripe secure card fields will load here after activation." data-es="Los campos seguros de tarjeta de Stripe aparecerán aquí después de activarse.">Stripe secure card fields will load here after activation.</span></div>
+                <div class="secure-placeholder" aria-hidden="true">
+                  <div class="mock-label">Card number<div class="mock-input">•••• •••• •••• 4242</div></div>
+                  <div class="mock-split"><div class="mock-label">Expiration<div class="mock-input">MM / YY</div></div><div class="mock-label">Security code<div class="mock-input">CVC</div></div></div>
+                </div>
+                <p class="mandate" data-en="In the live version, Stripe-hosted fields keep card details away from this website’s server." data-es="En la versión activa, los campos alojados por Stripe evitan que el servidor del sitio maneje los datos de tarjeta.">In the live version, Stripe-hosted fields keep card details away from this website’s server.</p>
+              </div>
+              <div class="payment-demo" id="achPayment" role="tabpanel" hidden>
+                <div class="stripe-slot"><span class="stripe-mark">S</span><span data-en="Stripe US bank-account verification will load here after activation." data-es="La verificación de cuenta bancaria de EE. UU. por Stripe aparecerá aquí después de activarse.">Stripe US bank-account verification will load here after activation.</span></div>
+                <div class="secure-placeholder" aria-hidden="true">
+                  <div class="mock-label">Account holder<div class="mock-input">Customer or business name</div></div>
+                  <div class="mock-label">Bank account<div class="mock-input">Connect and verify a US bank account</div></div>
+                </div>
+                <p class="mandate" data-en="The activated checkout will display Stripe’s required ACH authorization and bank verification language before submission." data-es="El pago activo mostrará la autorización ACH y el texto de verificación bancaria requeridos por Stripe antes de enviarse.">The activated checkout will display Stripe’s required ACH authorization and bank verification language before submission.</p>
+              </div>
+            </section>
+          </div>
+
+          <aside class="checkout-summary" aria-labelledby="summaryTitle">
+            <div class="summary-visual"><h2 id="summaryTitle" data-en="Order summary" data-es="Resumen del pedido">Order summary</h2><p data-en="Presentation prices—final approval required" data-es="Precios de presentación—requieren aprobación final">Presentation prices—final approval required</p></div>
+            <div class="summary-body">
+              <div class="summary-items" id="summaryItems"></div>
+              <div class="summary-price-row"><span data-en="Product subtotal" data-es="Subtotal de productos">Product subtotal</span><strong id="summarySubtotal">$0.00</strong></div>
+              <div class="summary-price-row"><span data-en="Pickup / delivery" data-es="Recogida / entrega">Pickup / delivery</span><strong id="summaryDelivery">$0.00</strong></div>
+              <div class="summary-price-row"><span data-en="Estimated tax" data-es="Impuesto estimado">Estimated tax</span><span data-en="Calculated when activated" data-es="Se calcula al activarse">Calculated when activated</span></div>
+              <div class="summary-price-row total"><span data-en="Demo total" data-es="Total de ejemplo">Demo total</span><strong id="summaryTotal">$0.00</strong></div>
+              <label class="legal-check"><input type="checkbox" required><span data-en="I understand this is a demonstration and no order or payment will be submitted." data-es="Entiendo que esta es una demostración y que no se enviará ningún pedido ni pago.">I understand this is a demonstration and no order or payment will be submitted.</span></label>
+              <button class="btn btn-primary btn-block" id="payButton" type="submit" data-en="Preview order confirmation" data-es="Ver confirmación del pedido">Preview order confirmation</button>
+              <p class="checkout-footnote" data-en="No card or bank information is collected on this prototype." data-es="Este prototipo no recopila información de tarjeta ni cuenta bancaria.">No card or bank information is collected on this prototype.</p>
+            </div>
+          </aside>
+        </div>
+      </form>
+
+      <section class="owner-checklist">
+        <h3 data-en="Before real Stripe activation" data-es="Antes de activar Stripe">Before real Stripe activation</h3>
+        <ul>
+          <li data-en="Approve products, bag sizes, and prices" data-es="Aprobar productos, tamaños y precios">Approve products, bag sizes, and prices</li>
+          <li data-en="Create and verify the Stripe business account" data-es="Crear y verificar la cuenta comercial de Stripe">Create and verify the Stripe business account</li>
+          <li data-en="Connect the business bank account" data-es="Vincular la cuenta bancaria del negocio">Connect the business bank account</li>
+          <li data-en="Set pickup, inventory, freight, and refund rules" data-es="Definir recogida, inventario, flete y reembolsos">Set pickup, inventory, freight, and refund rules</li>
+          <li data-en="Confirm tax treatment with a qualified adviser" data-es="Confirmar impuestos con un asesor calificado">Confirm tax treatment with a qualified adviser</li>
+          <li data-en="Test cards and ACH in Stripe test mode" data-es="Probar tarjetas y ACH en el modo de prueba de Stripe">Test cards and ACH in Stripe test mode</li>
+        </ul>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-row"><div><strong>Three Roots Animal Nutrition, LLC</strong><small>1702 S. International Blvd. · Weslaco, TX 78596</small></div><div><a href="tel:+19565208606">956-520-8606</a> · <a href="mailto:tavo@threeroots.net">tavo@threeroots.net</a></div></div>
+      <div class="credit" data-en="Private sales presentation · Stripe and bank processing are not connected. Website presentation by Anchor Global Tech — <a href='mailto:abel@anchorglobaltech.com'>abel@anchorglobaltech.com</a>." data-es="Presentación privada de ventas · Stripe y el procesamiento bancario no están conectados. Presentación web por Anchor Global Tech — <a href='mailto:abel@anchorglobaltech.com'>abel@anchorglobaltech.com</a>.">Private sales presentation · Stripe and bank processing are not connected. Website presentation by Anchor Global Tech — <a href="mailto:abel@anchorglobaltech.com">abel@anchorglobaltech.com</a>.</div>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

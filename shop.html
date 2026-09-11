@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Order Online Preview | Three Roots Animal Nutrition</title>
+  <meta name="description" content="Private bilingual preview of the Three Roots Animal Nutrition online product catalog, cart, delivery, and Stripe checkout experience.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#143d2b">
+  <link rel="stylesheet" href="store.css">
+  <script src="store.js" defer></script>
+</head>
+<body data-page="shop">
+  <div class="demo-bar" data-en="PRIVATE ORDERING PREVIEW · SAMPLE PRICES · NO LIVE PAYMENTS" data-es="VISTA PRIVADA DE PEDIDOS · PRECIOS DE EJEMPLO · SIN PAGOS REALES">PRIVATE ORDERING PREVIEW · SAMPLE PRICES · NO LIVE PAYMENTS</div>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" aria-label="Three Roots Animal Nutrition home"><img class="logo" src="./three-roots-logo.png" alt="Three Roots Animal Nutrition"></a>
+      <nav class="nav-links" aria-label="Store navigation">
+        <a href="index.html" data-en="Home" data-es="Inicio">Home</a>
+        <a href="shop.html" data-en="Products" data-es="Productos">Products</a>
+        <a class="cart-link" href="checkout.html" data-en="Cart" data-es="Carrito">Cart <span class="cart-count" aria-label="Items in cart">0</span></a>
+        <div class="lang-toggle" aria-label="Language">
+          <button type="button" class="active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="es" aria-pressed="false">ES</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="shop-hero">
+      <div class="container shop-hero-inner">
+        <div>
+          <div class="eyebrow" data-en="Three Roots online ordering" data-es="Pedidos en línea Three Roots">Three Roots online ordering</div>
+          <h1 data-en="Choose the feed. Build the order." data-es="Elija el alimento. Prepare el pedido.">Choose the feed. Build the order.</h1>
+          <p data-en="A clear bilingual shopping experience for breeders, flock owners, and retailers—with Weslaco pickup or planned Texas delivery." data-es="Una experiencia de compra bilingüe y clara para criadores, propietarios de aves y distribuidores, con recogida en Weslaco o entrega planeada en Texas.">A clear bilingual shopping experience for breeders, flock owners, and retailers—with Weslaco pickup or planned Texas delivery.</p>
+          <div class="trust-row">
+            <span><i></i><span data-en="Real Three Roots products" data-es="Productos reales Three Roots">Real Three Roots products</span></span>
+            <span><i></i><span data-en="Credit card or ACH layout" data-es="Diseño para tarjeta o ACH">Credit card or ACH layout</span></span>
+            <span><i></i><span data-en="Presentation mode only" data-es="Solo modo presentación">Presentation mode only</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="shop-main">
+      <div class="container shop-layout">
+        <div>
+          <div class="catalog-head">
+            <div><div class="eyebrow" data-en="Product catalog" data-es="Catálogo de productos">Product catalog</div><h2 data-en="Shop the feed line" data-es="Explore la línea de alimentos">Shop the feed line</h2><p data-en="Every price is a presentation placeholder. Three Roots will approve final bag sizes, prices, inventory, and delivery rules before activation." data-es="Cada precio es provisional para la presentación. Three Roots aprobará los tamaños, precios, inventario y reglas de entrega antes de activar la tienda.">Every price is a presentation placeholder. Three Roots will approve final bag sizes, prices, inventory, and delivery rules before activation.</p></div>
+          </div>
+          <div class="filters" aria-label="Product filters">
+            <button class="filter active" type="button" data-filter="all" data-en="All products" data-es="Todos">All products</button>
+            <button class="filter" type="button" data-filter="conditioner" data-en="Conditioning" data-es="Acondicionamiento">Conditioning</button>
+            <button class="filter" type="button" data-filter="maintenance" data-en="Maintenance" data-es="Mantenimiento">Maintenance</button>
+            <button class="filter" type="button" data-filter="specialty" data-en="Specialty" data-es="Especialidad">Specialty</button>
+          </div>
+          <div class="catalog-grid" id="catalogGrid" aria-live="polite"></div>
+          <div class="presentation-note"><b data-en="Owner decision required:" data-es="Se requiere decisión del propietario:">Owner decision required:</b> <span data-en="confirm which products can be sold online, final prices, minimum order, pickup hours, delivery zones, and freight charges." data-es="confirmar qué productos se venderán en línea, precios finales, pedido mínimo, horarios de recogida, zonas de entrega y cargos de flete.">confirm which products can be sold online, final prices, minimum order, pickup hours, delivery zones, and freight charges.</span></div>
+        </div>
+
+        <aside class="cart-card" aria-labelledby="cartTitle">
+          <div class="cart-head"><div><h3 id="cartTitle" data-en="Your order" data-es="Su pedido">Your order</h3><span data-en="Presentation cart" data-es="Carrito de presentación">Presentation cart</span></div><span class="cart-count" aria-hidden="true">0</span></div>
+          <div class="cart-items" id="cartItems"></div>
+          <div class="cart-totals">
+            <div class="total-row"><span data-en="Product subtotal" data-es="Subtotal de productos">Product subtotal</span><strong id="cartSubtotal">$0.00</strong></div>
+            <div class="total-row"><span data-en="Delivery &amp; tax" data-es="Entrega e impuestos">Delivery &amp; tax</span><span data-en="At checkout" data-es="Al finalizar">At checkout</span></div>
+            <div class="total-row grand"><span data-en="Current total" data-es="Total actual">Current total</span><strong id="cartTotal">$0.00</strong></div>
+            <a class="btn btn-primary btn-block" href="checkout.html" data-en="Review checkout →" data-es="Revisar pago →">Review checkout →</a>
+            <p class="cart-note" data-en="No charge will be made in this private preview." data-es="No se realizará ningún cobro en esta vista privada.">No charge will be made in this private preview.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-row"><div><strong>Three Roots Animal Nutrition, LLC</strong><small>1702 S. International Blvd. · Weslaco, TX 78596</small></div><div><a href="tel:+19565208606">956-520-8606</a> · <a href="mailto:tavo@threeroots.net">tavo@threeroots.net</a></div></div>
+      <div class="credit" data-en="Private sales presentation · Online payment processing is not connected. Website presentation by Anchor Global Tech — <a href='mailto:abel@anchorglobaltech.com'>abel@anchorglobaltech.com</a>." data-es="Presentación privada de ventas · El procesamiento de pagos no está conectado. Presentación web por Anchor Global Tech — <a href='mailto:abel@anchorglobaltech.com'>abel@anchorglobaltech.com</a>.">Private sales presentation · Online payment processing is not connected. Website presentation by Anchor Global Tech — <a href="mailto:abel@anchorglobaltech.com">abel@anchorglobaltech.com</a>.</div>
+    </div>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

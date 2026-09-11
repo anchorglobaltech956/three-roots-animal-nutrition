@@ -1,0 +1,25 @@
+THREE ROOTS ANIMAL NUTRITION — GITHUB PHOTO FIX
+
+This package removes the assets-folder problem. Every HTML page, stylesheet,
+script, photograph, logo, CNAME file, and .nojekyll file belongs at the TOP LEVEL
+of the GitHub repository.
+
+UPLOAD STEPS
+1. Download and extract this ZIP on your computer.
+2. Open the GitHub repository used for threeroots.anchorglobaltech.com.
+3. Select Add file > Upload files.
+4. Upload EVERY extracted item together.
+5. Confirm index.html and product-supreme-clean.webp appear at the same level.
+6. Commit the upload to the main branch.
+7. Open Settings > Pages and choose main and /(root).
+8. Wait for the deployment to finish.
+9. Open https://threeroots.anchorglobaltech.com and press Ctrl+F5.
+
+IMPORTANT
+- Do not upload the ZIP itself. GitHub does not extract ZIP files.
+- Do not create or use an assets folder with this package.
+- Do not rename files or change uppercase/lowercase characters.
+- The included CNAME file connects the existing Three Roots subdomain.
+- Product photographs now use object-fit: contain so labels are not cropped.
+- The business card remains inside the contact section and cannot open as a popup.
+- Store prices and Stripe/ACH payment screens remain demonstrations.
