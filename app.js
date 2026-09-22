@@ -1,0 +1,19 @@
+
+const allDealers=(window.THREE_ROOTS_DEALERS||[]);const dealers=allDealers.filter(d=>d.active!==false);const cities=window.THREE_ROOTS_CITIES||[];
+let activeCity='';
+const buttons=document.getElementById('city-buttons'),results=document.getElementById('dealer-results'),search=document.getElementById('dealer-search'),title=document.getElementById('results-title'),count=document.getElementById('results-count');
+const map=L.map('dealer-map',{scrollWheelZoom:false}).setView([29.2,-99.0],6);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+const markerByCity={};
+function esc(v=''){return String(v).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#039;')}
+function cityDealers(city){return dealers.filter(d=>d.city===city)}
+function selectCity(city,zoomMap=true){activeCity=city;search.value='';document.querySelectorAll('.city-btn').forEach(b=>b.classList.toggle('active',b.dataset.city===city));render();if(zoomMap&&markerByCity[city]){const c=cities.find(x=>x.city===city);map.setView([c.lat,c.lng],10);markerByCity[city].openPopup();}}
+function renderCities(){buttons.innerHTML=cities.map(c=>`<button class="city-btn" type="button" data-city="${esc(c.city)}">${esc(c.city)} <span>(${c.count})</span></button>`).join('');buttons.querySelectorAll('button').forEach(b=>b.onclick=()=>selectCity(b.dataset.city));}
+function addMarkers(){const group=[];cities.forEach(c=>{const m=L.marker([c.lat,c.lng]).addTo(map);m.bindPopup(`<strong>${esc(c.city)}</strong><br>${c.count} dealer location${c.count===1?'':'s'}<br><br><button class="popup-btn" onclick="window.pickDealerCity('${esc(c.city)}')">View dealers</button>`);markerByCity[c.city]=m;group.push(m);});if(group.length){const g=L.featureGroup(group);map.fitBounds(g.getBounds().pad(.08));}}
+window.pickDealerCity=(city)=>selectCity(city,false);
+function current(){const q=search.value.trim().toLowerCase();return dealers.filter(d=>(!activeCity||d.city===activeCity)&&(!q||[d.dealer_name,d.street_address,d.city,d.state,d.zip,d.telephone].join(' ').toLowerCase().includes(q)));}
+function exactMap(d){const q=encodeURIComponent(d.full_address);window.open(`https://www.google.com/maps/search/?api=1&query=${q}`,'_blank','noopener');}
+window.showDealerMap=(idx)=>{const d=dealers[idx];if(!d)return;exactMap(d)};
+function render(){const list=current().sort((a,b)=>a.dealer_name.localeCompare(b.dealer_name));title.textContent=activeCity?`Dealers in ${activeCity}`:'All Active Dealers';count.textContent=`${list.length} location${list.length===1?'':'s'}`;if(!list.length){results.innerHTML='<div class="no-results">No dealer locations matched your search.</div>';return;}results.innerHTML=list.map(d=>{const globalIndex=dealers.indexOf(d);const phone=d.telephone?`<a class="call" href="tel:${d.telephone.replace(/[^\d+]/g,'')}">Call ${esc(d.telephone)}</a>`:`<span class="pending">Phone confirmation pending</span>`;return `<article class="dealer-card"><h3>${esc(d.dealer_name)}</h3><p>${esc(d.street_address)}</p><p class="cityline">${esc(d.city)}, ${esc(d.state)} ${esc(d.zip||'')}</p><p><strong>Telephone:</strong> ${d.telephone?esc(d.telephone):'Pending verification'}</p><div class="actions">${phone}<button class="mapbtn" onclick="showDealerMap(${globalIndex})">Exact Map</button></div></article>`}).join('');}
+search.addEventListener('input',()=>{activeCity='';document.querySelectorAll('.city-btn').forEach(b=>b.classList.remove('active'));render()});document.getElementById('show-all').onclick=()=>{activeCity='';search.value='';document.querySelectorAll('.city-btn').forEach(b=>b.classList.remove('active'));render();const group=Object.values(markerByCity);if(group.length)map.fitBounds(L.featureGroup(group).getBounds().pad(.08));};
+renderCities();addMarkers();render();

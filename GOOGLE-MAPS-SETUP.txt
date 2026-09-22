@@ -1,0 +1,59 @@
+THREE ROOTS — GOOGLE DEALER MAP SETUP
+=====================================
+
+This package replaces the old front-page Texas/New Mexico/Oklahoma SVG city-dot map
+with an interactive Google Map prepared for all active dealers in dealers/dealers.json.
+
+BEFORE THE GOOGLE MAP CAN GO LIVE
+---------------------------------
+Google requires a Maps JavaScript API key for an interactive production map.
+
+1. In Google Cloud, create or select a project.
+2. Enable billing for the project.
+3. Enable:
+   - Maps JavaScript API
+   - Geocoding API
+4. Create a browser API key.
+5. Restrict the key to these HTTP referrers:
+   https://threerootsanimalnutrition.net/*
+   https://www.threerootsanimalnutrition.net/*
+6. Open google-maps-config.js in Hostinger File Manager.
+7. Replace:
+   PASTE_GOOGLE_MAPS_API_KEY_HERE
+   with your actual API key. Keep the quotation marks.
+
+Example only:
+window.THREE_ROOTS_GOOGLE_MAPS = {
+  apiKey: "YOUR_REAL_KEY_HERE",
+  dealersDataUrl: "dealers/dealers.json"
+};
+
+WHAT THE MAP DOES
+-----------------
+- Loads the existing active dealer records.
+- Geocodes each dealer's full street address through Google.
+- Places an individual pin at the dealer address.
+- Clicking a pin opens a popup with:
+  dealer name, address, phone number and Google Directions link.
+- Phone numbers are tappable on mobile.
+- Geocoded coordinates are cached in the visitor's browser for faster repeat loads.
+- The city buttons and complete /dealers/ page remain available.
+- If the API key is missing, the city dealer list continues to work and a setup notice appears in the map area.
+
+HOSTINGER UPLOAD
+----------------
+Use the same procedure that worked for the previous update:
+1. Back up public_html.
+2. Upload this ZIP.
+3. Extract to a temporary folder if Hostinger requires a folder name.
+4. Open the temporary folder, select ALL contents, and copy/move them into public_html.
+5. Choose Overwrite/Replace existing files.
+6. Confirm index.html, google-maps-config.js, submit-inquiry.php and dealers/ are directly in public_html.
+7. Add the Google API key to google-maps-config.js.
+8. Test the homepage map on desktop and mobile.
+
+IMPORTANT
+---------
+Do not put the ZIP itself inside another permanent public_html subfolder.
+The separate dealers/index.html page is preserved.
+The customer/dealer email forms to info@threeroots.net are preserved.

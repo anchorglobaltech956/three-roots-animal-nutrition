@@ -1,0 +1,320 @@
+[
+  {
+    "city": "Alamo",
+    "count": 2,
+    "lat": 26.1837,
+    "lng": -98.1231
+  },
+  {
+    "city": "Alice",
+    "count": 3,
+    "lat": 27.7522,
+    "lng": -98.0697
+  },
+  {
+    "city": "Alton",
+    "count": 4,
+    "lat": 26.2873,
+    "lng": -98.3136
+  },
+  {
+    "city": "Austin",
+    "count": 1,
+    "lat": 30.2672,
+    "lng": -97.7431
+  },
+  {
+    "city": "Brownsville",
+    "count": 5,
+    "lat": 25.9017,
+    "lng": -97.4975
+  },
+  {
+    "city": "Bulverde",
+    "count": 1,
+    "lat": 29.7436,
+    "lng": -98.4531
+  },
+  {
+    "city": "Canutillo",
+    "count": 1,
+    "lat": 31.9115,
+    "lng": -106.6003
+  },
+  {
+    "city": "Cleburne",
+    "count": 1,
+    "lat": 32.3476,
+    "lng": -97.3867
+  },
+  {
+    "city": "Cleveland",
+    "count": 1,
+    "lat": 30.3413,
+    "lng": -95.0855
+  },
+  {
+    "city": "Dallas",
+    "count": 1,
+    "lat": 32.7767,
+    "lng": -96.797
+  },
+  {
+    "city": "Devine",
+    "count": 2,
+    "lat": 29.1399,
+    "lng": -98.9053
+  },
+  {
+    "city": "Donna",
+    "count": 2,
+    "lat": 26.1703,
+    "lng": -98.0528
+  },
+  {
+    "city": "Eagle Pass",
+    "count": 1,
+    "lat": 28.7091,
+    "lng": -100.4995
+  },
+  {
+    "city": "Edinburg",
+    "count": 6,
+    "lat": 26.3017,
+    "lng": -98.1633
+  },
+  {
+    "city": "Escobares",
+    "count": 2,
+    "lat": 26.4106,
+    "lng": -98.9645
+  },
+  {
+    "city": "Falfurrias",
+    "count": 1,
+    "lat": 27.2269,
+    "lng": -98.1442
+  },
+  {
+    "city": "Forest Hill",
+    "count": 1,
+    "lat": 32.6721,
+    "lng": -97.2692
+  },
+  {
+    "city": "Fort Stockton",
+    "count": 1,
+    "lat": 30.894,
+    "lng": -102.8793
+  },
+  {
+    "city": "George West",
+    "count": 1,
+    "lat": 28.3325,
+    "lng": -98.1175
+  },
+  {
+    "city": "Harlingen",
+    "count": 2,
+    "lat": 26.1906,
+    "lng": -97.6961
+  },
+  {
+    "city": "Hebbronville",
+    "count": 1,
+    "lat": 27.3067,
+    "lng": -98.6784
+  },
+  {
+    "city": "Hidalgo",
+    "count": 1,
+    "lat": 26.1004,
+    "lng": -98.2631
+  },
+  {
+    "city": "Houston",
+    "count": 3,
+    "lat": 29.7604,
+    "lng": -95.3698
+  },
+  {
+    "city": "Kingsville",
+    "count": 1,
+    "lat": 27.5159,
+    "lng": -97.8561
+  },
+  {
+    "city": "La Blanca",
+    "count": 2,
+    "lat": 26.292,
+    "lng": -98.0378
+  },
+  {
+    "city": "Laredo",
+    "count": 1,
+    "lat": 27.5306,
+    "lng": -99.4803
+  },
+  {
+    "city": "McAllen",
+    "count": 4,
+    "lat": 26.2034,
+    "lng": -98.23
+  },
+  {
+    "city": "Mercedes",
+    "count": 1,
+    "lat": 26.1498,
+    "lng": -97.9136
+  },
+  {
+    "city": "Midland",
+    "count": 1,
+    "lat": 31.9973,
+    "lng": -102.0779
+  },
+  {
+    "city": "Mission",
+    "count": 8,
+    "lat": 26.2159,
+    "lng": -98.3253
+  },
+  {
+    "city": "Natalia",
+    "count": 1,
+    "lat": 29.1902,
+    "lng": -98.8628
+  },
+  {
+    "city": "Odessa",
+    "count": 1,
+    "lat": 31.8457,
+    "lng": -102.3676
+  },
+  {
+    "city": "Olmito",
+    "count": 1,
+    "lat": 26.0217,
+    "lng": -97.5344
+  },
+  {
+    "city": "Pearsall",
+    "count": 1,
+    "lat": 28.8922,
+    "lng": -99.095
+  },
+  {
+    "city": "Pecos",
+    "count": 1,
+    "lat": 31.4229,
+    "lng": -103.4932
+  },
+  {
+    "city": "Penitas",
+    "count": 1,
+    "lat": 26.2306,
+    "lng": -98.4447
+  },
+  {
+    "city": "Pharr",
+    "count": 2,
+    "lat": 26.1948,
+    "lng": -98.1836
+  },
+  {
+    "city": "Pleasanton",
+    "count": 1,
+    "lat": 28.9672,
+    "lng": -98.4786
+  },
+  {
+    "city": "Raymondville",
+    "count": 1,
+    "lat": 26.4815,
+    "lng": -97.7831
+  },
+  {
+    "city": "Rio Grande City",
+    "count": 4,
+    "lat": 26.3798,
+    "lng": -98.8203
+  },
+  {
+    "city": "Robstown",
+    "count": 1,
+    "lat": 27.7903,
+    "lng": -97.6689
+  },
+  {
+    "city": "Roma",
+    "count": 2,
+    "lat": 26.4051,
+    "lng": -99.0159
+  },
+  {
+    "city": "Royse City",
+    "count": 1,
+    "lat": 32.9751,
+    "lng": -96.3325
+  },
+  {
+    "city": "San Antonio",
+    "count": 5,
+    "lat": 29.4241,
+    "lng": -98.4936
+  },
+  {
+    "city": "San Benito",
+    "count": 2,
+    "lat": 26.1326,
+    "lng": -97.6311
+  },
+  {
+    "city": "San Diego",
+    "count": 1,
+    "lat": 27.7639,
+    "lng": -98.2389
+  },
+  {
+    "city": "San Isidro",
+    "count": 1,
+    "lat": 26.7156,
+    "lng": -98.4486
+  },
+  {
+    "city": "San Juan",
+    "count": 1,
+    "lat": 26.1892,
+    "lng": -98.1553
+  },
+  {
+    "city": "San Manuel",
+    "count": 2,
+    "lat": 26.5145,
+    "lng": -98.1217
+  },
+  {
+    "city": "Seguin",
+    "count": 1,
+    "lat": 29.5688,
+    "lng": -97.9647
+  },
+  {
+    "city": "Von Ormy",
+    "count": 1,
+    "lat": 29.2894,
+    "lng": -98.6445
+  },
+  {
+    "city": "Weslaco",
+    "count": 2,
+    "lat": 26.1595,
+    "lng": -97.9908
+  },
+  {
+    "city": "Zapata",
+    "count": 3,
+    "lat": 26.9073,
+    "lng": -99.2714
+  }
+]

@@ -1,0 +1,146 @@
+.dealer-google-map-shell {
+  position: relative;
+  min-height: 560px;
+  background: #e7ece5;
+  overflow: hidden;
+}
+
+.dealer-google-map {
+  width: 100%;
+  min-height: 560px;
+  height: 560px;
+  background: #e7ece5;
+}
+
+.dealer-google-map-status {
+  position: absolute;
+  z-index: 4;
+  left: 14px;
+  top: 14px;
+  max-width: min(430px, calc(100% - 28px));
+  padding: 10px 13px;
+  border: 1px solid rgba(255,255,255,.62);
+  border-radius: 8px;
+  color: #fff;
+  background: rgba(13,58,45,.92);
+  box-shadow: 0 7px 22px rgba(7,29,24,.20);
+  font-size: .78rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.dealer-google-map-status.is-ready {
+  opacity: .93;
+}
+
+.dealer-google-map-status.is-error,
+.dealer-google-map-status.is-setup {
+  right: 14px;
+  max-width: none;
+  padding: 18px;
+  border-color: #f2b84b;
+  color: #fffaf0;
+  background: rgba(13,58,45,.97);
+  font-size: .88rem;
+}
+
+.dealer-google-map-status a {
+  color: #ffd273;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.dealer-map-popup {
+  max-width: 290px;
+  padding: 2px 1px;
+  color: #102f25;
+  font-family: Arial, sans-serif;
+}
+
+.dealer-map-popup h3 {
+  margin: 0 0 7px;
+  color: #0d3a2d;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.08rem;
+  line-height: 1.22;
+}
+
+.dealer-map-popup address {
+  margin: 0;
+  color: #46564e;
+  font-style: normal;
+  line-height: 1.45;
+}
+
+.dealer-map-popup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 11px;
+}
+
+.dealer-map-popup-actions a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 7px 10px;
+  border-radius: 5px;
+  font-size: .78rem;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.dealer-map-popup-call {
+  color: #fff;
+  background: #16563c;
+}
+
+.dealer-map-popup-directions {
+  color: #5c350d;
+  background: #f2b84b;
+}
+
+.dealer-google-map-noscript {
+  margin: 0;
+  padding: 24px;
+}
+
+@media (max-width: 850px) {
+  .dealer-google-map-shell,
+  .dealer-google-map {
+    min-height: 430px;
+    height: 430px;
+  }
+}
+
+@media (max-width: 520px) {
+  .dealer-google-map-shell,
+  .dealer-google-map {
+    min-height: 390px;
+    height: 390px;
+  }
+
+  .dealer-google-map-status {
+    left: 9px;
+    top: 9px;
+    max-width: calc(100% - 18px);
+  }
+
+  .dealer-google-map-status.is-error,
+  .dealer-google-map-status.is-setup {
+    right: 9px;
+  }
+
+  .dealer-map-popup {
+    max-width: 235px;
+  }
+
+  .dealer-map-popup-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .dealer-map-popup-actions a {
+    justify-content: center;
+  }
+}
